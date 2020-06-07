@@ -37,3 +37,14 @@
 .navbar-dark {
   background: #512da8;
 }
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.nav-item {
+  font-size: small;
+}
