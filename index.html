@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,13 +12,13 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 
   <title>Ristorante Con Fusion</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+  <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
     <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavBar">
         <span class="navbar-toggler-icon"></span>
@@ -39,7 +40,7 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
+          <a id = "loginButton">
             <span class="fa fa-sign-in"></span> Login</a>
         </span>
       </div>
@@ -181,7 +182,7 @@
                 <img src=" img/logo.png" class="img-fluid" />
           </div>
           <div class="col-12 col-sm-6 align-self-center"">
-            <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-block nav-link btn-warning">
+            <a id="reserveTableButton" role="button" class="btn btn-block nav-link btn-warning">
             Reserve Table</a>
           </div>
         </div>
@@ -384,6 +385,12 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+            $("#reserveTableButton").click(function(){
+              $('#reserveModal').modal('toggle');
+            });
+            $("#loginButton").click(function(){
+              $('#loginModal').modal('toggle');
             });
         })
     </script>
